@@ -1,5 +1,11 @@
 # SwipeTopView
 
+
+## SCREENSHOT
+
+![SwipeTopView](https://github.com/cinaryusufiu/SwipeTopView/blob/master/SwipeTopView/2pcxw6.gif)  
+![SwipeTopView2](https://github.com/cinaryusufiu/SwipeTopView/blob/master/SwipeTopView/2pcz7r.gif)
+
 ## Installation
 
 SwipeTopView is available through [CocoaPods](https://cocoapods.org/). To install it, simply add the following line to your Podfile:
@@ -40,15 +46,15 @@ pod 'SwipeTopView'
     }
     
     func swipeTopViewDidOpen(_ swipeTopView: SwipeTopView) {
-        print("swipeUpViewDidOpen")
+        print("swipeTopViewDidOpen")
     }
     
     func swipeTopViewWillClose(_ swipeTopView: SwipeTopView) {
-        print("swipeUpViewWillClose")
+        print("swipeTopViewWillClose")
     }
     
     func swipeTopViewDidClose(_ swipeTopView: SwipeTopView) {
-        print("swipeUpViewDidClose")
+        print("swipeTopViewDidClose")
     }
     
    
