@@ -46,15 +46,15 @@ pod 'SwipeTopView'
     }
     
     func swipeTopViewDidOpen(_ swipeTopView: SwipeTopView) {
-        print("swipeUpViewDidOpen")
+        print("swipeTopViewDidOpen")
     }
     
     func swipeTopViewWillClose(_ swipeTopView: SwipeTopView) {
-        print("swipeUpViewWillClose")
+        print("swipeTopViewWillClose")
     }
     
     func swipeTopViewDidClose(_ swipeTopView: SwipeTopView) {
-        print("swipeUpViewDidClose")
+        print("swipeTopViewDidClose")
     }
     
    
