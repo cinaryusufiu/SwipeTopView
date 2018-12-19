@@ -1,7 +1,14 @@
 # SwipeTopView
 
+## Installation
 
-# SwipeTopViewDatasource
+SwipeTopView is available through [CocoaPods](https://cocoapods.org/). To install it, simply add the following line to your Podfile:
+
+```sh
+pod 'SwipeTopView'
+```
+
+## SwipeTopViewDatasource
 
 ```sh
 
@@ -18,28 +25,39 @@
     func heightContainerView() -> CGFloat {
         return 100
     }
+
+
 ```
 
-# SwipeTopViewDelegate
+## SwipeTopViewDelegate
+
 
 ```sh
-   
-  //MARK: SwipeTopViewDelegate
+ //MARK: SwipeTopViewDelegate
 
-    func swipeTopViewWillOpen(_ swipeTopView: SwipeTopView) {
-        print("swipeTopViewWillOpen")
-    }
+   func swipeTopViewWillOpen(_ swipeTopView: SwipeTopView) {
+       print("swipeTopViewWillOpen")
+   }
     
-    func swipeUpViewDidOpen(_ swipeTopView: SwipeTopView) {
-        print("swipeUpViewDidOpen")
-    }
+   func swipeUpViewDidOpen(_ swipeTopView: SwipeTopView) {
+       print("swipeUpViewDidOpen")
+   }
     
-    func swipeUpViewWillClose(_ swipeTopView: SwipeTopView) {
-        print("swipeUpViewWillClose")
-    }
+   func swipeUpViewWillClose(_ swipeTopView: SwipeTopView) {
+       print("swipeUpViewWillClose")
+   }
     
-    func swipeUpViewDidClose(_ swipeTopView: SwipeTopView) {
-        print("swipeUpViewDidClose")
-    }
-    
+   func swipeUpViewDidClose(_ swipeTopView: SwipeTopView) {
+       print("swipeUpViewDidClose")
+   }
+   
 ```
+	 
+## Authors
+
+* **Yusuf Çınar** - [https://github.com/cinaryusufiu](https://github.com/cinaryusufiu)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
