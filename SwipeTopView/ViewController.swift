@@ -60,16 +60,16 @@ class ViewController: UIViewController , SwipeTopViewDataSource , SwipeTopViewDe
     
     func swipeTopViewDidOpen(_ swipeTopView: SwipeTopView) {
         isShowSwipeTopView = true
-        print("swipeUpViewDidOpen")
+        print("swipeTopViewDidOpen")
     }
     
     func swipeTopViewWillClose(_ swipeTopView: SwipeTopView) {
-        print("swipeUpViewWillClose")
+        print("swipeTopViewWillClose")
     }
     
     func swipeTopViewDidClose(_ swipeTopView: SwipeTopView) {
         isShowSwipeTopView = false
-        print("swipeUpViewDidClose")
+        print("swipeTopViewDidClose")
     }
     
     //MARK: SwipeTopViewDatasource
