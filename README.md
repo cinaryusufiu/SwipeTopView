@@ -3,7 +3,9 @@
 
 SwipeTopViewDelegate
 
-    //MARK: SwipeTopViewDatasource
+```sh
+
+   //MARK: SwipeTopViewDatasource
 
     func constantContainerSwipeTopView() -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 10, bottom: 2, right: 10)
@@ -35,3 +37,4 @@ SwipeTopViewDelegate
     func swipeUpViewDidClose(_ swipeTopView: SwipeTopView) {
         print("swipeUpViewDidClose")
     }
+```
