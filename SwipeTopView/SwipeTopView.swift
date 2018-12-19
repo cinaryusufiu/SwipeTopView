@@ -26,7 +26,7 @@ public class SwipeTopView: UIView {
         super.init(frame: frame)
         self.mainView = mainView
     }
-    func startOrganizerView() {
+    fileprivate func startOrganizerView() {
         setupViewInit()
         setupView()
     }
@@ -94,18 +94,18 @@ public class SwipeTopView: UIView {
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
             self.transform = CGAffineTransform(translationX: 0, y: heightContentView)
         }, completion: { (_) in
-            delegate.swipeUpViewDidOpen(self)
+            delegate.swipeTopViewDidOpen(self)
         })
     }
     func closePageSwipeTopView() {
         
         guard let delegate = self.delegate else { return  }
     
-        delegate.swipeUpViewWillClose(self)
+        delegate.swipeTopViewWillClose(self)
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
             self.transform = .identity
         }, completion: { (_) in
-            delegate.swipeUpViewDidClose(self)
+            delegate.swipeTopViewDidClose(self)
             self.removeFromSuperview()
         })
     }
@@ -119,7 +119,7 @@ public class SwipeTopView: UIView {
 
 @objc public protocol SwipeTopViewDelegate : class {
     func swipeTopViewWillOpen (_ swipeTopView : SwipeTopView)
-    func swipeUpViewDidOpen (_ swipeTopView : SwipeTopView)
-    func swipeUpViewWillClose (_ swipeTopView : SwipeTopView)
-    func swipeUpViewDidClose (_ swipeTopView : SwipeTopView)
+    func swipeTopViewDidOpen (_ swipeTopView : SwipeTopView)
+    func swipeTopViewWillClose (_ swipeTopView : SwipeTopView)
+    func swipeTopViewDidClose (_ swipeTopView : SwipeTopView)
 }

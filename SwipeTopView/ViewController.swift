@@ -21,6 +21,7 @@ class ViewController: UIViewController , SwipeTopViewDataSource , SwipeTopViewDe
         let view = SwipeTopView(frame: .zero, mainView: self.view)
         view.datasource = self
         view.delegate = self
+        view.backgroundColor = .blue
         return view
     }()
     let openTopViewButton : UIButton = {
@@ -57,23 +58,23 @@ class ViewController: UIViewController , SwipeTopViewDataSource , SwipeTopViewDe
         print("swipeTopViewWillOpen")
     }
     
-    func swipeUpViewDidOpen(_ swipeTopView: SwipeTopView) {
+    func swipeTopViewDidOpen(_ swipeTopView: SwipeTopView) {
         isShowSwipeTopView = true
         print("swipeUpViewDidOpen")
     }
     
-    func swipeUpViewWillClose(_ swipeTopView: SwipeTopView) {
+    func swipeTopViewWillClose(_ swipeTopView: SwipeTopView) {
         print("swipeUpViewWillClose")
     }
     
-    func swipeUpViewDidClose(_ swipeTopView: SwipeTopView) {
+    func swipeTopViewDidClose(_ swipeTopView: SwipeTopView) {
         isShowSwipeTopView = false
         print("swipeUpViewDidClose")
     }
     
     //MARK: SwipeTopViewDatasource
     func constantContainerSwipeTopView() -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 10, bottom: 2, right: 10)
+        return UIEdgeInsets(top: 2, left: 0, bottom: 0, right: 0)
     }
     
     func containerSwipeTopView() -> UIView {
@@ -81,7 +82,7 @@ class ViewController: UIViewController , SwipeTopViewDataSource , SwipeTopViewDe
     }
     
     func heightContainerView() -> CGFloat {
-        return 100
+        return 60
     }
 
 }
