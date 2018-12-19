@@ -34,22 +34,23 @@ pod 'SwipeTopView'
 
 ```sh
  //MARK: SwipeTopViewDelegate
-
-   func swipeTopViewWillOpen(_ swipeTopView: SwipeTopView) {
-       print("swipeTopViewWillOpen")
-   }
+ 
+    func swipeTopViewWillOpen(_ swipeTopView: SwipeTopView) {
+        print("swipeTopViewWillOpen")
+    }
     
-   func swipeUpViewDidOpen(_ swipeTopView: SwipeTopView) {
-       print("swipeUpViewDidOpen")
-   }
+    func swipeTopViewDidOpen(_ swipeTopView: SwipeTopView) {
+        print("swipeUpViewDidOpen")
+    }
     
-   func swipeUpViewWillClose(_ swipeTopView: SwipeTopView) {
-       print("swipeUpViewWillClose")
-   }
+    func swipeTopViewWillClose(_ swipeTopView: SwipeTopView) {
+        print("swipeUpViewWillClose")
+    }
     
-   func swipeUpViewDidClose(_ swipeTopView: SwipeTopView) {
-       print("swipeUpViewDidClose")
-   }
+    func swipeTopViewDidClose(_ swipeTopView: SwipeTopView) {
+        print("swipeUpViewDidClose")
+    }
+    
    
 ```
 	 
