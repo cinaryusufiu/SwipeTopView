@@ -16,7 +16,7 @@ pod 'SwipeTopView'
 
 ## SwipeTopViewDatasource
 
-```sh
+```swift
 
    //MARK: SwipeTopViewDatasource
 
@@ -37,8 +37,7 @@ pod 'SwipeTopView'
 
 ## SwipeTopViewDelegate
 
-
-```
+```swift
  //MARK: SwipeTopViewDelegate
  
     func swipeTopViewWillOpen(_ swipeTopView: SwipeTopView) {
