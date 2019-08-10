@@ -38,7 +38,7 @@ pod 'SwipeTopView'
 ## SwipeTopViewDelegate
 
 
-```sh
+```
  //MARK: SwipeTopViewDelegate
  
     func swipeTopViewWillOpen(_ swipeTopView: SwipeTopView) {
@@ -57,7 +57,6 @@ pod 'SwipeTopView'
         print("swipeTopViewDidClose")
     }
     
-   
 ```
 	 
 ## Authors
