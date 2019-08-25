@@ -1,12 +1,12 @@
-# SwipeTopView
+## SwipeTopView
 
 
-## SCREENSHOT
+### SCREENSHOT
 
 ![SwipeTopView](https://github.com/cinaryusufiu/SwipeTopView/blob/master/SwipeTopView/2pcxw6.gif)  
 ![SwipeTopView2](https://github.com/cinaryusufiu/SwipeTopView/blob/master/SwipeTopView/2pcz7r.gif)
 
-## Installation
+### Installation
 
 SwipeTopView is available through [CocoaPods](https://cocoapods.org/). To install it, simply add the following line to your Podfile:
 
@@ -47,7 +47,7 @@ SwipeTopView is available through [CocoaPods](https://cocoapods.org/). To instal
    swipeTopView.closePageSwipeTopView()
    
 ```
-## SwipeTopViewDatasource
+### SwipeTopViewDatasource
 
 ```swift
 
@@ -68,7 +68,7 @@ SwipeTopView is available through [CocoaPods](https://cocoapods.org/). To instal
 
 ```
 
-## SwipeTopViewDelegate
+### SwipeTopViewDelegate
 
 ```swift
    
@@ -92,11 +92,11 @@ SwipeTopView is available through [CocoaPods](https://cocoapods.org/). To instal
     
 ```
 	 
-## Authors
+### Authors
 
 * **Yusuf Çınar** - [https://github.com/cinaryusufiu](https://github.com/cinaryusufiu)
 
-## License
+### License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
