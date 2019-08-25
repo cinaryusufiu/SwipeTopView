@@ -17,17 +17,16 @@ SwipeTopView is available through [CocoaPods](https://cocoapods.org/). To instal
 ### SwipeTopView
 
 ```swift
-   let redView : UIView = {
+    let contentSwipeTopView : UIView = {
         let view = UIView(frame: .zero)
         view.backgroundColor = .red
         return view
     }()
-    
-   lazy var swipeTopView: SwipeTopView = {
+    lazy var swipeTopView : SwipeTopView = {
         let view = SwipeTopView(frame: .zero)
-        view.backgroundColor = .blue
-        view.delegate = self
         view.dataSource = self
+        view.delegate = self
+        view.backgroundColor = .blue
         return view
     }()
 ```
