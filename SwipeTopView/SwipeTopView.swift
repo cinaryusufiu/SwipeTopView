@@ -9,6 +9,17 @@
 import Foundation
 import UIKit
 
+@objc public protocol SwipeTopViewDataSource : NSObjectProtocol {
+    func heightContainerView() -> CGFloat
+    func containerSwipeTopView() -> UIView
+    func constantContainerSwipeTopView() -> UIEdgeInsets
+}
+@objc public protocol SwipeTopViewDelegate : NSObjectProtocol {
+    func swipeTopViewWillOpen (_ swipeTopView : SwipeTopView)
+    func swipeTopViewDidOpen (_ swipeTopView : SwipeTopView)
+    func swipeTopViewWillClose (_ swipeTopView : SwipeTopView)
+    func swipeTopViewDidClose (_ swipeTopView : SwipeTopView)
+}
 
 public class SwipeTopView: UIView {
     
@@ -109,15 +120,4 @@ public class SwipeTopView: UIView {
     }
 }
 
-@objc public protocol SwipeTopViewDataSource : class {
-    func heightContainerView() -> CGFloat
-    func containerSwipeTopView() -> UIView
-    func constantContainerSwipeTopView() -> UIEdgeInsets
-}
 
-@objc public protocol SwipeTopViewDelegate : class {
-    func swipeTopViewWillOpen (_ swipeTopView : SwipeTopView)
-    func swipeTopViewDidOpen (_ swipeTopView : SwipeTopView)
-    func swipeTopViewWillClose (_ swipeTopView : SwipeTopView)
-    func swipeTopViewDidClose (_ swipeTopView : SwipeTopView)
-}
