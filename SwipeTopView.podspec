@@ -4,9 +4,9 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "SwipeTopView"
-  spec.version      = "0.1.6"
+  spec.version      = "0.1.7"
   spec.summary      = "Top animation view"
-
+  spec.swift_version = '5.0'
   spec.description  = <<-DESC
           Animating top view
                    DESC
