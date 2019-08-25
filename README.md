@@ -11,15 +11,12 @@
 SwipeTopView is available through [CocoaPods](https://cocoapods.org/). To install it, simply add the following line to your Podfile:
 
  ```sh
-   
    pod 'SwipeTopView'
- 
  ```
 
 ### SwipeTopView
 
 ```swift
-
    let redView : UIView = {
         let view = UIView(frame: .zero)
         view.backgroundColor = .red
@@ -33,63 +30,50 @@ SwipeTopView is available through [CocoaPods](https://cocoapods.org/). To instal
         view.dataSource = self
         return view
     }()
-   
 ```
 
 ### SwipeTopView Open-Close
 
 ```swift
-   
    //MARK:Open func
    swipeTopView.openPageSwipeTopView()
    
    //MARK:Close func
    swipeTopView.closePageSwipeTopView()
-   
 ```
 ### SwipeTopViewDatasource
 
 ```swift
-
     //MARK: SwipeTopViewDatasource
 
     func constantContainerSwipeTopView() -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 10, bottom: 2, right: 10)
     }
-    
     func containerSwipeTopView() -> UIView {
         return contentSwipeTopView
     }
-    
     func heightContainerView() -> CGFloat {
         return 100
     }
-
-
 ```
 
 ### SwipeTopViewDelegate
 
 ```swift
-   
     //MARK: SwipeTopViewDelegate
  
     func swipeTopViewWillOpen(_ swipeTopView: SwipeTopView) {
         print("swipeTopViewWillOpen")
     }
-    
     func swipeTopViewDidOpen(_ swipeTopView: SwipeTopView) {
         print("swipeTopViewDidOpen")
     }
-    
     func swipeTopViewWillClose(_ swipeTopView: SwipeTopView) {
         print("swipeTopViewWillClose")
     }
-    
     func swipeTopViewDidClose(_ swipeTopView: SwipeTopView) {
         print("swipeTopViewDidClose")
     }
-    
 ```
 	 
 ### Authors
