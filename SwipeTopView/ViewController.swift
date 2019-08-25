@@ -18,8 +18,8 @@ class ViewController: UIViewController , SwipeTopViewDataSource , SwipeTopViewDe
         return view
     }()
     lazy var swipeTopView : SwipeTopView = {
-        let view = SwipeTopView(frame: .zero, mainView: self.view)
-        view.datasource = self
+        let view = SwipeTopView(frame: .zero)
+        view.dataSource = self
         view.delegate = self
         view.backgroundColor = .blue
         return view

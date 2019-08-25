@@ -18,29 +18,27 @@ public class SwipeTopView: UIView {
             setupContainerAddConstraintView()
         }
     }
-    weak var delegate : SwipeTopViewDelegate?
-    weak var datasource : SwipeTopViewDataSource?
-    private weak var mainView : UIView?
+    public weak var delegate : SwipeTopViewDelegate?
+    public weak var dataSource : SwipeTopViewDataSource?
    
-    public init(frame: CGRect, mainView: UIView){
+    public override init(frame: CGRect){
         super.init(frame: frame)
-        self.mainView = mainView
+        
     }
     fileprivate func startOrganizerView() {
         setupViewInit()
         setupView()
     }
     fileprivate func setupViewInit() {
-        guard let datasource = self.datasource else { return  }
-        guard let mainView = self.mainView else { return  }
+        guard let dataSource = self.dataSource else { return  }
         guard let window = UIApplication.shared.keyWindow else { return  }
         
-        let heightContentView = datasource.heightContainerView() + window.safeAreaInsets.top
+        let heightContentView = dataSource.heightContainerView() + window.safeAreaInsets.top
         self.heightContentView = heightContentView
-        mainView.addSubview(self)
+        window.addSubview(self)
         setupAddConstraintView()
         
-        containerSwipeTopView = datasource.containerSwipeTopView()
+        containerSwipeTopView = dataSource.containerSwipeTopView()
         
     }
     fileprivate func setupView() {
@@ -54,18 +52,18 @@ public class SwipeTopView: UIView {
     }
     fileprivate func setupAddConstraintView(){
         guard let heightContentView = self.heightContentView else { return  }
-        guard let mainView = self.mainView else { return  }
+        guard let window = UIApplication.shared.keyWindow else { return  }
         
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.bottomAnchor.constraint(equalTo:mainView.topAnchor).isActive = true
+        self.bottomAnchor.constraint(equalTo:window.topAnchor).isActive = true
         self.heightAnchor.constraint(equalToConstant: heightContentView + 10).isActive = true
-        self.rightAnchor.constraint(equalTo: mainView.rightAnchor).isActive = true
-        self.leftAnchor.constraint(equalTo: mainView.leftAnchor).isActive = true
+        self.rightAnchor.constraint(equalTo: window.rightAnchor).isActive = true
+        self.leftAnchor.constraint(equalTo: window.leftAnchor).isActive = true
         
     }
     fileprivate func setupContainerAddConstraintView(){
         
-        guard let datasource = self.datasource else { return  }
+        guard let dataSource = self.dataSource else { return  }
         guard let containerSwipeTopView = self.containerSwipeTopView else { return  }
         guard let window = UIApplication.shared.keyWindow else { return  }
         
@@ -73,16 +71,16 @@ public class SwipeTopView: UIView {
         
         containerSwipeTopView.translatesAutoresizingMaskIntoConstraints = false
         
-        containerSwipeTopView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -datasource.constantContainerSwipeTopView().bottom).isActive = true
-        containerSwipeTopView.topAnchor.constraint(equalTo: self.topAnchor, constant: datasource.constantContainerSwipeTopView().top + window.safeAreaInsets.top + 10).isActive = true
-        containerSwipeTopView.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: -datasource.constantContainerSwipeTopView().right).isActive = true
-        containerSwipeTopView.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant:datasource.constantContainerSwipeTopView().left).isActive = true
+        containerSwipeTopView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -dataSource.constantContainerSwipeTopView().bottom).isActive = true
+        containerSwipeTopView.topAnchor.constraint(equalTo: self.topAnchor, constant: dataSource.constantContainerSwipeTopView().top + window.safeAreaInsets.top + 10).isActive = true
+        containerSwipeTopView.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: -dataSource.constantContainerSwipeTopView().right).isActive = true
+        containerSwipeTopView.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant:dataSource.constantContainerSwipeTopView().left).isActive = true
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func openPageSwipeTopView() {
+    public func openPageSwipeTopView() {
        
         startOrganizerView()
         
@@ -97,7 +95,7 @@ public class SwipeTopView: UIView {
             delegate.swipeTopViewDidOpen(self)
         })
     }
-    func closePageSwipeTopView() {
+    public func closePageSwipeTopView() {
         
         guard let delegate = self.delegate else { return  }
     
