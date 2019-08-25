@@ -10,9 +10,11 @@
 
 SwipeTopView is available through [CocoaPods](https://cocoapods.org/). To install it, simply add the following line to your Podfile:
 
-```sh
-pod 'SwipeTopView'
-```
+ ```sh
+   
+   pod 'SwipeTopView'
+ 
+ ```
 
 ### SwipeTopView
 
@@ -31,19 +33,17 @@ pod 'SwipeTopView'
         view.dataSource = self
         return view
     }()
-
-   swipeTopView.openPageSwipeTopView()
-   
-   swipeTopView.closePageSwipeTopView()
    
 ```
 
 ### SwipeTopView Open-Close
 
 ```swift
-
+   
+   //MARK:Open func
    swipeTopView.openPageSwipeTopView()
    
+   //MARK:Close func
    swipeTopView.closePageSwipeTopView()
    
 ```
